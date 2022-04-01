@@ -1,0 +1,25 @@
+  <%- include("header") %> 
+  <body>
+    <main>
+      <div class="container">
+        <p class="advice">Advice <% if (adviceStr.length === 0) { %>
+                   #<%= firstAdviceId[0] %> 
+        <% } else { %> 
+          #<%= adviceId[0] %> 
+          <% } %>
+        </p>
+        <div class="advice-generator">
+          <% if (adviceStr.length === 0) { %>
+            “<%= firstAdvicePara[0] %>”
+          <%} else { %>
+            “<%= adviceStr[0] %>”  
+          <% } %>
+        </div>
+        <img class="divider" src="/images/pattern-divider-desktop.svg" alt="" />
+          <form action="/" method="post">
+          <button type="submit" class="circle"><img class="dice" src="/images/icon-dice.svg" alt="" /></button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
